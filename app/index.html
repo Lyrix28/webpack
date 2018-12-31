@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DNews - Decentralized News</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <button id="addnew" onclick="App.addNews()" style="float:right;">Add News</button>
+  <button id="getyournews" onclick="App.getYourNews()" style="float:right;">Your News</button>
+  <h1>DNews</h1>
+  <h2>Decentralized News</h2>
+  <hr />
+
+  <div id="tags">
+  <h1>Tags</h1>
+  <hr />
+  <div id="tagswrapper">
+  </div>
+  </div>
+
+  <div id="yournews" hidden="true">
+  <h1>Your News</h1>
+  <hr />
+  <div id="wrapper3" class="wrapper">
+  <div class="divborder" style="color:#888">标签</div>
+  <div class="divborder" style="color:#888">发表时间</div>
+  <div class="divborder" style="color:#888">资金</div>
+  <div class="divborder" style="color:#888">内容</div>
+  </div>
+  </div>
+
+  <div id="yournew" hidden="true">
+  <div id="content" ></div>
+  <br>
+  <button type="button" onclick="App.transfer(this)" style="float:left;">充值</button>
+  <button type="button" onclick="App.killNew(this)" style="float:right;">结束</button>
+
+  </div>
+
+  <div id="news" hidden="true">
+  <h1>News</h1>
+  
+  <button id="register" onclick="App.registerTag()" style="float:right;">Register</button>
+  <button id="unregister" onclick="App.unregisterTag()" style="float:right;">Unregister</button>
+  <hr />
+  <div id="wrapper2" class="wrapper">
+  <div class="divborder" style="color:#888">作者</div>
+  <div class="divborder" style="color:#888">发表时间</div>
+  <div class="divborder" style="color:#888">资金</div>
+  <div class="divborder" style="color:#888">内容</div>
+  </div>
+  </div>
+
+  <div id="new" hidden="true" style="text-align: center;">
+  <div id="content" ></div>
+  <hr />
+  <button type="button" onclick="App.voteNew(this,1)" style="float:left;">支持</button>
+  <button type="button" onclick="App.transfer(this)" style="float:center;">捐助</button>
+  <button type="button" onclick="App.voteNew(this,0)" style="float:right;">反对</button>
+  </div>
+  
+  <span id="status" style="color: #0F0;"></span>
+  <br>
+  <span class="hint" style="color: #888;"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</footer>
+</body>
+</html>
